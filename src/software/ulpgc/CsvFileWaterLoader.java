@@ -28,7 +28,7 @@ public class CsvFileWaterLoader implements WaterLoader{
         }
     }
 
-    private List<Water> load(BufferedReader reader) {
+    private List<Water> load(BufferedReader reader) throws IOException{
         return reader.lines().skip(1).map(this::toWater).collect(toList());
     }
 
